@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أحبك ❤️</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            animation: slideIn 0.8s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .heart {
+            font-size: px;
+            margin-bottom: 20px;
+            animation: heartBeat 1.5s infinite;
+        }
+        
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        
+        h1 {
+            color: #764ba2;
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .message {
+            color: #333;
+            font-size: px;
+            line-height: 1.8;
+            margin:px 0;
+            font-weight: 500;
+        }
+        
+        .special-text {
+            color: #e74c3c;
+            font-size: 28px;
+            margin: 30px 0;
+            font-weight: bold;
+        }
+        
+        .button-group {
+            margin-top: 40px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            padding: 15px 40px;
+            font-size: 18px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        
+        .yes-btn {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .yes-btn:hover {
+            background: #c0392b;
+            transform: scale(1.05);
+        }
+        
+        .no-btn {
+            background: #95a5a6;
+            color: white;
+        }
+        
+        .no-btn:hover {
+            background: #7f8c8d;
+            transform: scale(0.95);
+        }
+        
+        .stars {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+        
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    
+    <div class="container">
+        <div class="heart">❤️</div>
+        <h1>أحبك</h1>
+        <div class="message">
+            أنتِ أجمل شيء في حياتي
+        </div>
+        <div class="special-text">
+            هل تقبلين حبي؟
+        </div>
+        <div class="button-group">
+            <button class="yes-btn" onclick="handleYes()">نعم ❤️</button>
+            <button class="no-btn" onclick="handleNo()">لا</button>
+        </div>
+    </div>
+    
+    <script>
+        // إنشاء نجوم عشوائية
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            for (let i = 0; i < 50; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+        
+        function handleYes() {
+            alert('أنتِ أجمل قرار في حياتي! 💕');
+            // يمكنك إضافة رسالة أو إعادة توجيه هنا
+        }
+        
+        function handleNo() {
+            const btn = event.target;
+            btn.style.position = 'absolute';
+            btn.style.left = Math.random() * 80 + '%';
+            btn.style.top = Math.random() * 80 + '%';
+        }
+        
+        createStars();
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<a href="https://www.youtube.com">click me</a>
+
+</body>
+</html>
